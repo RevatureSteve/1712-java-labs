@@ -2,62 +2,6 @@ package com.revature.dylanbritton;
 
 public class Lab2 {
 
-	public static void main(String[] args) {
-
-		int fib = 2;
-		int[] unsortedArray = { 3, 7, 4, 2, 2, 9, 5, 1 };
-		int fact = 4;
-		int rotations = 4;
-		int[] arrayForRotation = { 1, 2, 3, 4, 5 };
-		String brackets = "()()";
-
-		// print nth number of fibonacci sequence
-		String ordInd;
-		switch (fib){
-		case 1:
-			ordInd = "st";
-			break;
-		case 2:
-			ordInd = "nd";
-			break;
-		case 3:
-			ordInd = "rd";
-			break;
-			default:
-				ordInd = "th";
-		}
-		
-
-		System.out.println("The " + fib + ordInd + " number of the Fibonacci sequence is " + fibonacci(fib) + ".");
-		
-		// sort array in numerical order and then print result
-		int[] sortedArray = sort(unsortedArray);
-		System.out.print("The array has been sorted in numerical order: ");
-		for (int i = 0; i < unsortedArray.length; i++) {
-			System.out.print(sortedArray[i]);
-		}
-
-		// print factorial of given number
-		System.out.println();
-		System.out.println("The factorial of " + fact + " is " + factorial(fact) + ".");
-
-		// print array after a number of rotations
-		int[] rotatedArray = rotateLeft(arrayForRotation, rotations);
-		System.out.print("After " + rotations + " rotations, the array is now: ");
-		for (int i = 0; i < arrayForRotation.length; i++) {
-			System.out.print(rotatedArray[i]);
-		}
-
-		// print whether or not the brackets are balanced
-		System.out.println();
-		if (balancedBrackets(brackets) == true) {
-			System.out.println("The brackets are balanced.");
-		} else {
-			System.out.println("The brackets are not balanced.");
-		}
-
-	}
-
 	/*
 	 * 1. Return the nth fibonacci number f(0) = 0 f(1) = 1 f(10) = 55
 	 */

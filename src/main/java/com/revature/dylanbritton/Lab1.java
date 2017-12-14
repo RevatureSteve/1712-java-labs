@@ -2,28 +2,7 @@ package com.revature.dylanbritton;
 
 
 public class Lab1 {
-	public static void main(String[] args) {
-
-		int x = 3;
-		int y = 1;
-
-		int[] array = null;
-
-		try {
-			Lab1.divide(x, y);
-
-		} catch (Exception e) {
-			System.out.println(e);
-		}
-
-		try {
-			Lab1.average(array);
-		} catch (Exception e) {
-			System.out.println(e);
-		}
-
-	}
-
+	
 	/*
 	 * 1. Cast from double to int
 	 * 
@@ -55,7 +34,7 @@ public class Lab1 {
 	 * f(10,2) = 5.0 f(3,2) = 1.5 Bonus as we haven't covered exceptions f(1,0) =
 	 * throw IllegalArgumentException
 	 */
-	public static double divide(double operandOne, double operandTwo) {
+	public static double divide(double operandOne, double operandTwo) throws IllegalArgumentException {
 		if (operandTwo == 0) {
 			throw new IllegalArgumentException("Cannot divide by zero");
 		}
@@ -103,7 +82,7 @@ public class Lab1 {
 	 * f([2]) = 2.0 f([2,3]) = 2.5 Bonus as we haven't covered exceptions f(null) =
 	 * throw IllegalArgumentException
 	 */
-	public static double average(int[] array) {
+	public static double average(int[] array) throws IllegalArgumentException {
 		if (array == null) {
 			throw new IllegalArgumentException("The array is empty.");
 		}

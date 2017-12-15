@@ -86,7 +86,9 @@ public class Lab1 {
 	 * Bonus as we haven't covered exceptions
 	 * f(null) = throw IllegalArgumentException
 	 */
+	//
 	public static double average(int[] array) throws IllegalArgumentException {
+		if (array == null) throw new IllegalArgumentException();
 		int sum = 0;
 		for(int i = 0; i < array.length; i++) {
 			sum += array[i];

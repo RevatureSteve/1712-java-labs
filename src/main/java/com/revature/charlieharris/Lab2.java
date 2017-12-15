@@ -11,8 +11,13 @@ public class Lab2 {
 	  f(1) = 1
 	  f(10) = 55
 	*/
+	/**
+	 * Return the n'th fibonacci number
+	 * @param n should be non-negative
+	 * @return the n'th fibonacci number, 0 if n < 0
+	 */
 	public static int fibonacci(int n) {
-		if (n == 0) return 0;
+		if (n <= 0) return 0;
 		if (n == 1) return 1;
 		return fibonacci(n-1) + fibonacci(n-2);
 	}
@@ -23,6 +28,11 @@ public class Lab2 {
 	  Don't use built-in sort() method... that would be lame.
 	*/
 	//selection sort
+	/**
+	 * Sorts [array] in ascending order
+	 * @param array must not be null
+	 * @return the sorted array
+	 */
 	public static int[] sort(int[] array) {
 		for(int i = 0; i < array.length; i++) {
 			int smallestIndex = i;
@@ -40,10 +50,9 @@ public class Lab2 {
 	 * @param array
 	 * @param i must be a valid index of [array]
 	 * @param j must be a valid index of [array]
-	 * @return 
+	 * @return the array with the elements swapped 
 	 */
 	private static int[] swap(int[] array, int i, int j) {
-		if (i == j) return array;
 		int temp = array[i];
 		array[i] = array[j];
 		array[j] = temp;
@@ -56,8 +65,13 @@ public class Lab2 {
 	  f(1) = 1
 	  f(3) = 6
 	*/
+	/**
+	 * Returns the factorial of [n]
+	 * @param n should be non-negative
+	 * @return n!, or 1 if n < 0
+	 */
 	public static int factorial(int n) {
-		if (n == 0) return 1;
+		if (n <= 0) return 1;
 		return n * factorial(n - 1);
 	}
 	
@@ -68,6 +82,12 @@ public class Lab2 {
 	  f([1,2,3,4,5], 6) = [2,3,4,5,1]
 	  f([1,2,3,4,5], 3) = [4,5,1,2,3]
 	*/
+	/**
+	 * Shifts each element in [array] to the left [n] times
+	 * @param array must not be null
+	 * @param n the number of times to shift the elements to the left
+	 * @return the rotated array
+	 */
 	public static int[] rotateLeft(int[] array, int n) {
 		for(int i = 0; i < n; i++) {
 			array = rotateLeft(array);
@@ -77,9 +97,9 @@ public class Lab2 {
 	
 	//Helper method for rotateLeft(int[], int)
 	/**
-	 * Rotates [arr] left one time
-	 * @param array
-	 * @return
+	 * Shifts each element in [array] left one time
+	 * @param array must not be null
+	 * @return the rotated array
 	 */
 	private static int[] rotateLeft(int[] array) {
 		int[] rotated = new int[array.length];
@@ -106,6 +126,11 @@ public class Lab2 {
 	  Return true if balanced
 	  Return false if not balanced
 	*/
+	/**
+	 * Returns true if [str] is balanced
+	 * @param str must contain only the characters '(', ')', '{', '}', '[', and ']'
+	 * @return true if [str] is balanced, false otherwise. If [str] contains characters other than the ones listed above, behavior is unspecified.
+	 */
 	public static boolean balancedBrackets(String str) {
 		if (str.length() == 0) return true;
 		char c = str.charAt(0);
@@ -123,7 +148,7 @@ public class Lab2 {
 	/**
 	 * Gets the closing bracket that matches [c]
 	 * @param c must be an open bracket: '(', '{', '['
-	 * @return whitespace when improper argument passed in
+	 * @return The closing bracket that matches [c]
 	 */
 	public static char getReverse(char c) {
 		switch(c) {

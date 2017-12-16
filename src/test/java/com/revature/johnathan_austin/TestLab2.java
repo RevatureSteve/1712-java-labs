@@ -2,8 +2,6 @@ package com.revature.johnathan_austin;
 
 import static org.junit.Assert.assertArrayEquals;
 
-import com.revature.Lab2;
-
 import junit.framework.TestCase;
 
 public class TestLab2 extends TestCase {

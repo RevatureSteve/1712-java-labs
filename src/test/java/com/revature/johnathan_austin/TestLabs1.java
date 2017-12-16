@@ -2,6 +2,8 @@ package com.revature.johnathan_austin;
 
 
 
+import com.revature.Lab1;
+
 import junit.framework.TestCase;
 
 public class TestLabs1 extends TestCase {

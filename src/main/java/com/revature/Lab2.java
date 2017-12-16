@@ -1,4 +1,4 @@
-package com.revature.johnathan_austin;
+package com.revature;
 
 public class Lab2 {
 

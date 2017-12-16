@@ -1,4 +1,4 @@
-package com.revature.johnathan_austin;
+package com.revature;
 
 public class Lab1 {
 	/* Create new Java Project, new java class and copy below and paste into the class

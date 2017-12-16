@@ -105,34 +105,11 @@ public class Lab1 {
 	 * f(null) = throw IllegalArgumentException
 	 */
 	public static double average(int[] array) {
-		int total = 0;
+		double total = 0;
 		for(int i = 0;i<array.length;i++){
 			total += array[i];
 		}
 		return (total/array.length);
-	}
-	
-	public static void main(String[] args) {
-		//1
-				System.out.println(castToInt(2.3));
-				//2
-				short s = 33;
-				System.out.println(castToByte(s));
-				//3
-				System.out.println(divide(10, 2));
-				System.out.println(divide(3, 2));
-				System.out.println(divide(1, 0));
-				//4
-				System.out.println(isEven(2));
-				System.out.println(isEven(3));
-				//5
-				int[] evens = {2,4,6};
-				int[] oneOdd = {2,3,4};
-				System.out.println(isAllEven(evens));
-				System.out.println(isAllEven(oneOdd));
-				//6
-				int[] array = {1,2,3};
-				System.out.println(average(array));
 	}
 }
 		

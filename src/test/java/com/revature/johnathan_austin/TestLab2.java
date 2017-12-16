@@ -23,7 +23,8 @@ public class TestLab2 extends TestCase {
 	}
 	
 	public void testFibonacci() {
-		//assertEquals(55, Lab2.fibonacci(10));
+		assertEquals(0, Lab2.fibonacci(0));
+		assertEquals(55, Lab2.fibonacci(10));
 		assertEquals(1, Lab2.fibonacci(1));
 	}
 	

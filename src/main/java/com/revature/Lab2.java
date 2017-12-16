@@ -1,41 +1,43 @@
 package com.revature;
 
+import java.util.Stack;
+
 public class Lab2 {
 
 	/*
 	 * 1. Return the nth fibonacci number f(0) = 0 f(1) = 1 f(10) = 55
 	 */
 	public static int fibonacci(int n) {
-		int prev = 0;
-		int curr = 1;
+		int current = 0;
+		int next = 1;
 		int i = 0;
 		int total = 0;
 		while (i < n) {
-			total = prev + curr;
-			prev = curr;
-			curr = total;
+			total = current + next;
+			current = next;
+			next = total;
 			i++;
 		}
-		return total;
+		return current;
 	}
 
 	/*
 	 * 2. Sort array of integers f([2,4,5,1,3,1]) = [1,1,2,3,4,5] Don't use built-in
 	 * sort() method... that would be lame.
 	 */
-	public static int[] sort(int[] array) {
-		int n = array.length;
-		for (int j = 1; j < n; j++) {
-			int key = array[j];
-			int i = j - 1;
-			while ((i > -1) && (array[i] > key)) {
-				array[i + 1] = array[i];
-				i--;
-			}
-			array[i + 1] = key;
-		}
-		return array;
-	}
+    public static int[] sort(int[] array) {
+
+        for(int i = 0; i< array.length; i++){
+            for(int j = i;j<array.length;j++){
+                if(array[j]<array[i]){
+                    int temp = array[i];
+                    array[i]=array[j];
+                    array[j] = temp;
+                }
+            }
+        }
+        return array;
+    }
 
 	/*
 	 * 3. Return the factorial of n f(0) = 1 f(1) = 1 f(3) = 6
@@ -56,18 +58,25 @@ public class Lab2 {
 	 * f([1,2,3,4,5], 3) = [4,5,1,2,3]
 	 */
 	public static int[] rotateLeft(int[] array, int n) {
-
-	    int offset = array.length - n % array.length;
-	    if (offset > 0) {
-	        int[] copy = array.clone();
-	        for (int i = 0; i < array.length; ++i) {
-	            int j = (i + offset) % array.length;
-	            array[i] = copy[j];
-	        }
-	    }
-
-		return array;
-	}
+        int moveLeft = array.length%(n+1);
+        
+        for(int i = 0; i < array.length; i++){
+            if(i-moveLeft >=0){
+             
+                int temp = array[i-moveLeft];
+                array[i-moveLeft] = array[i];
+                array[i] = temp;
+            }
+            else if(moveLeft-i < 0){
+                int temp = array[array.length-moveLeft];
+                array[array.length-moveLeft] = array[i];
+                array[i] = temp;
+            }
+        }
+        
+        
+        return array;
+    }
 
 	/*
 	 * 5. Balanced Brackets A bracket is any one of the following: (, ), {, }, [, or
@@ -76,24 +85,37 @@ public class Lab2 {
 	 * not balanced
 	 */
 	public static boolean balancedBrackets(String bracketsString) {
-		String[] split = bracketsString.split("");
-		int tally = 0;
-		int i = 0;
-		while (i < split.length) {
-			if (split[i] == "(" || split[i] == "{" || split[i] == "[") {
-				tally++;
-			}
-			if (split[i] == "}" || split[i] == ")" || split[i] == "]") {
-				tally--;
-			}
-			i++;
+        Object[] split = bracketsString.split("");
+        int i = 0;
+        Stack<Object> s = new Stack<Object>();
+        while (i < split.length) {
+            if ("(".equals(split[i].toString()) || "{".equals(split[i].toString()) || 
+                    "[".equals(split[i].toString())) {
+                s.push(split[i]);
+            } else if ("}".equals(split[i].toString()) || ")".equals(split[i].toString()) || 
+                    "]".equals(split[i].toString())) {
+                if ("}".equals(split[i].toString())) {
+                    if ("{".equals(s.peek().toString())) {
+                        s.pop();
+                    }
+                } else if (")".equals(split[i].toString())) {
+                    if ("(".equals(s.peek().toString())) {
+                        s.pop();
+                    }
+                } else if ("]".equals(split[i].toString())) {
+                    if ("[".equals(s.peek().toString())) {
+                        s.pop();
+                    }
+                }
+            }
+            i++;
+        }
+        if (s.isEmpty()) {
+            return true;
+        } else {
+            return false;
+        }
 
-		}
-
-		if (tally == 0) {
-			return true;
-		} else
-			return false;
-	}
+    }
 
 }

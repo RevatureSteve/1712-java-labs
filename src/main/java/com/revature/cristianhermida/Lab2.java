@@ -16,8 +16,7 @@ public class Lab2 {
 			 return 0;
 		 }
 		 else if(n == 1){						//returns 1 if the nth number is 1
-			 return 1;
-			 
+			 return 1; 
 		 }
 		 else {									//if not 0 or 1 then then number is greater than 1 and we can perform the fibonacci sequence algo.
 			 for(i=1;i<count;++i)    
@@ -62,12 +61,10 @@ public class Lab2 {
 	  f(3) = 6
 	*/
 	public static int factorial(int n) {
-		
 		int x = 1;
 		for (int i = 1; i <= n ; i++) {
 			x = x * i;
 		}
-		
 		return x;
 	}
 	
@@ -79,7 +76,6 @@ public class Lab2 {
 	  f([1,2,3,4,5], 3) = [4,5,1,2,3]
 	*/
 	public static int[] rotateLeft(int[] array, int n) {
-		
 		int i;
 		for (i = 0; i < n; i++) {
 			int x, temp;
@@ -88,19 +84,7 @@ public class Lab2 {
 				array[x] = array[x + 1];
 			}
 			array[x] = temp;
-		}
-        
-		
-//		for (int i = 0; i < n; i++) {
-//			for (int j = array.length - 1; j > 0; j--) {
-//				int temp = array[j];
-//				array[j] = array[j - 1];
-//				array[j - 1] = temp;
-//			}
-//		} 
-
-		
-		
+		}		
         return array;
 	}
 	
@@ -122,7 +106,6 @@ public class Lab2 {
 	*/
 	public static boolean balancedBrackets(String bracketsString) {
 		Stack<Character> stack  = new Stack<Character>();
-		
         for(int i = 0; i < bracketsString.length(); i++) {
             char c = bracketsString.charAt(i);
             if(c == '[' || c == '(' || c == '{' ) {     

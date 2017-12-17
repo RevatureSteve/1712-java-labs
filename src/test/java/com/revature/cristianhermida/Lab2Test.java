@@ -37,13 +37,10 @@ public class Lab2Test {
 		int[] arr1 = {1,2,3,4,5};
 		int[] arr1r = {2,3,4,5,1};
 		int[] arr2r = {4,5,1,2,3};
-//		arr1r = tester.rotateLeft(arr1, 1);
-//		for(int num: arr1r) {
-//			System.out.println(num);
-//		}
+
 		assertArrayEquals("Rotate left 1", arr1r, tester.rotateLeft(arr1,1));
-		//assertArrayEquals("Rotate left 6", arr1, tester.rotateLeft(arr1, 6));
-		//assertArrayEquals("Rotate left 3", arr2r, tester.rotateLeft(arr1, 3));
+		assertArrayEquals("Rotate left 6", arr1, tester.rotateLeft(arr1, 6));
+		assertArrayEquals("Rotate left 3", arr2r, tester.rotateLeft(arr1, 3));
 	}
 	
 	@Test

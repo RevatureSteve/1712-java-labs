@@ -24,10 +24,7 @@ public class Lab1 {
 		System.out.println("Checking to see if number " + x +" is even: " + isEven(x));
 		
 		try {
-			
 			System.out.println("Getting average of array: " + average(numbers));
-			
-			
 		} catch (Exception e) {
 			System.out.println(e);
 		}
@@ -79,7 +76,6 @@ public class Lab1 {
 		if(operandTwo == 0) {
 			throw new IllegalArgumentException("Cannot divide by 0 ");
 		}
-		
 		return (operandOne/operandTwo);
 	}
 	
@@ -135,12 +131,10 @@ public class Lab1 {
 		if(array == null) {
 			throw new IllegalArgumentException("The is empty ");
 		}
-		int sum = 0;
+		double sum = 0;
 		for (int number: array) {
 			sum = sum + number;
 		}
-		
-		
-		return sum/array.length;
+		return (double)(sum/array.length);
 	}
 }

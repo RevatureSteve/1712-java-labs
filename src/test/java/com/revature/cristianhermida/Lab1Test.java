@@ -22,9 +22,13 @@ public class Lab1Test {
 		assertEquals("casting -128 to byte", -128 , tester.castToByte(x));
 	}
 	
-	@Test
+	@Test(expected = IllegalArgumentException.class)
 	public void divide() {
 		Lab1 tester = new Lab1();
+		assertEquals("dividing 10/2", 5.0, Lab1.divide(10, 2), 1e-15);
+		assertEquals("dividing 3/2", 1.5, Lab1.divide(3, 2), 1e-15);
+		assertEquals("dividing 1/0", 1, Lab1.divide(1, 0), 1e-15);
+		
 		
 	}
 	
@@ -48,10 +52,21 @@ public class Lab1Test {
 		
 	}
 	
+//	@Test(expected = IllegalArgumentException.class)
+//	public void average() throws IllegalArgumentException {
+//		Lab1 tester = new Lab1();
+//		int[] arr = {2,3};
+//		assertEquals("average of 2 + 3",2.5, Lab1.average(arr));
+//	}
+	
 	@Test(expected = IllegalArgumentException.class)
-	public void average() throws IllegalArgumentException {
+	public void average() {
 		Lab1 tester = new Lab1();
 		int[] arr = {2,3};
-		assertEquals("average of 2 + 3",2.5, Lab1.average(arr));
+		int[] arr1 = null;
+		assertEquals("average of 2 + 3", 2.5, Lab1.average(arr), 1e-15);
+		assertEquals("average of 2 + 3", 2.5, Lab1.average(arr1), 1e-15);
+		
+		
 	}
 }

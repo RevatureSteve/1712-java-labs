@@ -15,7 +15,6 @@ public class JavaLab1 {
 	 * f(3.1) = 3
 	 */
 	public static int castToInt(double n) {
-		//return Integer.valueOf(n);
 		return (int)n;
 	}
 	

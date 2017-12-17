@@ -12,6 +12,8 @@ public class JavaLab2 {
 	public static int fibonacci(int n) {
 		int fib[] = new int[n+1];
 		fib[0]=0;
+		if(n==0)
+			return fib[n];
 		fib[1]=1;
 		for(int i=2; i<=n; i++) {
 			fib[i]=fib[i-1]+fib[i-2];
@@ -122,19 +124,22 @@ public class JavaLab2 {
 			}
 			
 		}
-		return true;
+		if(!stack.isEmpty())
+			return false;
+		else
+			return true;
 	}
 
 	
 	public static void main(String[] args) {
-		System.out.println(fibonacci(6));
+		System.out.println(fibonacci(0));
 		int[] sortedArray = sort(new int[] {2,4,5,1,3,1});
 		for(int i: sortedArray)
 			System.out.print(i+", ");
 		System.out.println("\n"+factorial(4));
-		int[] rotatedArray = rotateLeft(new int[] {1,2,3,4,5}, 6);
+		int[] rotatedArray = rotateLeft(new int[] {1,2,3,4,5}, 1);
 		for(int i: rotatedArray)
 			System.out.print(i+", ");
-		System.out.println("\n"+balancedBrackets("({[]})"));
+		System.out.println("\n"+balancedBrackets("("));
 	}
 }

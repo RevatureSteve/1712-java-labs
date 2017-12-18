@@ -1,5 +1,9 @@
 package com.revature.patrickkennedy;
 
+import static org.hamcrest.CoreMatchers.instanceOf;
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertThat;
+
 import org.junit.Assert;
 import org.junit.Test;
 
@@ -15,7 +19,9 @@ public class TestLabs {
 		 * f(0.0) = 0
 		 * f(3.1) = 3
 		 */
-		
+        assertThat(Lab1.castToInt(0.0), instanceOf(int.class));
+		assertEquals(Lab1.castToInt(0.0), 0); 
+		assertEquals(Lab1.castToInt(3.1), 3); 
 	}
 	
 	@Test
@@ -28,9 +34,10 @@ public class TestLabs {
 		 * f(2) = 2
 		 * f(128) = -128
 		 */
-
+        assertThat(Lab1.castToByte((short) 2), instanceOf(byte.class));
+		assertEquals(Lab1.castToByte((short) 2), 2); 
+		assertEquals(Lab1.castToByte((short) 128), -128); 
 	}
-
 	
 	@Test(expected = IllegalArgumentException.class)
 	public void testDivision() {
@@ -201,7 +208,6 @@ public class TestLabs {
 		Assert.assertFalse(Lab2.balancedBrackets(")")); 
 		Assert.assertFalse(Lab2.balancedBrackets("(()")); 
 		Assert.assertFalse(Lab2.balancedBrackets("([)]")); 
-
 
 	}
 }

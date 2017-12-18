@@ -9,11 +9,13 @@ public class Lab2 {
 		int f = 0;
 		int i = 1;
 		int b = 0;
+
 		for (int j = 0; j < n; j++) {
 			f = i + b;
 			i = b;
 			b = f;
 		}
+
 		return f;
 
 	}
@@ -42,8 +44,12 @@ public class Lab2 {
 	public static int factorial(int n) {
 		int f = 1;
 
-		for (int i = 1; i <= n; i++) {
-			f *= i;
+		if (n == 0) {
+			return n;
+		} else {
+			for (int i = 1; i <= n; i++) {
+				f *= i;
+			}
 		}
 		return f;
 	}
@@ -81,12 +87,13 @@ public class Lab2 {
 		if (bracketsString.length() % 2 != 0) {
 			return false;
 		}
-		for (int i = 0; i < bracketsString.length() / 2; i++) {
+		for (int i = 0; i < bracketsString.length(); i++) {
 			char a = bracketsString.charAt(i);
 			char b = bracketsString.charAt(i + 1);
-			char c = bracketsString.charAt(bracketsString.length() - 1);
-			
+			char c = bracketsString.charAt(bracketsString.length() - 1 -i);
+
 			if (bracketConverter(a) + bracketConverter(b) != 0 && bracketConverter(a) + bracketConverter(c) != 0) {
+				
 				return false;
 			}
 		}
@@ -102,19 +109,19 @@ public class Lab2 {
 			bracketInt = 1;
 			break;
 		case '{':
-			bracketInt =2;
+			bracketInt = 2;
 			break;
 		case '[':
-			bracketInt =3;
+			bracketInt = 3;
 			break;
 		case ')':
-			bracketInt =-1;
+			bracketInt = -1;
 			break;
 		case '}':
-			bracketInt =-2;
+			bracketInt = -2;
 			break;
 		case ']':
-			bracketInt =-3;
+			bracketInt = -3;
 			break;
 		default:
 			bracketInt = 0;

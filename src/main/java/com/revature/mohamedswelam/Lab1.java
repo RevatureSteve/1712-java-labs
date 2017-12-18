@@ -11,11 +11,7 @@ public class Lab1 {
 		
 	}
 	
-	/* Create new Java Project, new java class and copy below and paste into the class
-	 *	workout the code below to the best of your ability.
- 	 *	if confused on how to get started ask batch mates or ask in general slack
-	 *	don't hesitate to ask!
-	 *Due: Monday EOD 12/18/2017
+	/* 
 
 	 * 1. Cast from double to int
 	 * 

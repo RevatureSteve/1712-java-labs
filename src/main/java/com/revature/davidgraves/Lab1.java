@@ -1,6 +1,6 @@
 package com.revature.davidgraves;
 
-public class Snippet {
+public class Lab1 {
 	/* Create new Java Project, new java class and copy below and paste into the class
 		 *	workout the code below to the best of your ability.
 	 	 *	if confused on how to get started ask batch mates or ask in general slack
@@ -95,19 +95,26 @@ public class Snippet {
 		 * 6. Return the Average
 		 * 
 		 * labels:[arrays, operators, control statements, exceptions]
-		 * 
+		 *  
 		 * f([2]) = 2.0
 		 * f([2,3]) = 2.5
 		 * Bonus as we haven't covered exceptions
 		 * f(null) = throw IllegalArgumentException
 		 */
-		public static double average(int[] array) {
+		public static double average(int[] array) throws IllegalArgumentException {
 			int total = 0;
-			for (int i : array) {
-				total += i;
-			}
+			if(array != null)
+				{
+				for (int i : array) {
+					total += i;
+				}
 			
-			return (double)(total / array.length);
+				return (double)(total / array.length);
+			}
+			else
+			{
+				throw new IllegalArgumentException();
+			}
 		}
 	
 	

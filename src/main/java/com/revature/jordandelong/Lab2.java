@@ -1,4 +1,4 @@
-package com.revature;
+package com.revature.jordandelong;
 
 import java.util.Arrays;
 import java.util.Stack;

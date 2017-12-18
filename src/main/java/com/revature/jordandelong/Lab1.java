@@ -1,4 +1,4 @@
-package com.revature;
+package com.revature.jordandelong;
 
 public class Lab1 
 {
@@ -44,7 +44,7 @@ public class Lab1
 	 *Bonus as we haven't covered exceptions
 	 * f(1,0) = throw IllegalArgumentException 
 	 */
-	public static double divide(double operandOne, double operandTwo)
+	public static double divide(double operandOne, double operandTwo) throws IllegalArgumentException
 	{
 		//if divisor is 0 then division is undefined, so throw an IllegalArgumentException
 		if(operandTwo == 0)
@@ -103,7 +103,7 @@ public class Lab1
 	 * Bonus as we haven't covered exceptions
 	 * f(null) = throw IllegalArgumentException
 	 */
-	public static double average(int[] array) 
+	public static double average(int[] array) throws IllegalArgumentException
 	{
 		if(array == null)
 		{

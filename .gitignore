@@ -1,5 +1,10 @@
-<<<<<<< HEAD
-=======
+
+/.metadata/
+.project
+target/
+RemoveSystemsTempFiles/
+.settings
+
 
 /.recommenders/
 
@@ -27,5 +32,6 @@ nbbuild/
 dist/
 nbdist/
 .nb-gradle/
->>>>>>> master
+
 /.metadata/
+

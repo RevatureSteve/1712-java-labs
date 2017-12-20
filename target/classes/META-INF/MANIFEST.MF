@@ -1,3 +1,10 @@
+
+Manifest-Version: 1.0
+Built-By: Francisco
+Build-Jdk: 1.8.0_151
+Created-By: Maven Integration for Eclipse
+
+
 Manifest-Version: 1.0
 Built-By: Destinatus
 Build-Jdk: 1.8.0_131

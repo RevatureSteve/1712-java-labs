@@ -1,4 +1,4 @@
-package com.revature.davidgraves.junit;
+package com.revature.davidgraves;
 
 import org.junit.Test;
 

@@ -62,9 +62,9 @@ public class Lab2 {
 	*/
 	public static int[] rotateLeft(int[] array, int n) {
 		int i;
-		int[] tempArray;
+		int[] tempArray = null;
         for (i = 0; i < n; i++) {
-        	int i, temp;
+        	int temp;
             temp = array[0];
             for (i = 0; i < n - 1; i++)
                 array[i] = array[i + 1];

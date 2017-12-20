@@ -1,9 +1,9 @@
 package com.revature.MohamadAlhindi;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
-import org.junit.Test;
+import static org.junit.Assert.*;
 
-import com.revature.MohamadAlhindi.Lab1;
+//import static org.junit.jupiter.api.Assertions.assertEquals;
+import org.junit.Test;
 
 public class TestLab1 
 {

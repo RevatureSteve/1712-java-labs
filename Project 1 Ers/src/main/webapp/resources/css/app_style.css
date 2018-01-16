@@ -1,0 +1,91 @@
+@charset "ISO-8859-1";
+
+body, html {
+	height: 100%;
+	background-color: white;
+}
+
+.navbar {
+	margin-bottom: 0;
+	border-radius: 0;
+	background-color: white;
+}
+
+.navbar-nav li a {
+ line-height: 50px;
+}
+
+.container .jumbotron {
+	margin-bottom: 0;
+	border-radius: 0;
+	background-color: #F1F3F4;
+	min-height: 350px;
+}
+
+.logo {
+	padding-top: 5px;
+	line-height: 50px;
+	vertical-align: middle;
+	height: auto;
+	width: auto;
+	max-height: 75px;
+}
+
+.divider {
+	height: 40px;
+}
+
+.employee-color {
+	color: #FE6900;
+}
+
+.manager-color {
+	color: #09f;
+}
+
+.dashboard-card-container {
+	padding: 10px;
+}
+
+
+footer {
+	background-color: #F1F3F4;
+	padding: 10px;
+}
+
+
+#main-page-image {
+	background-image: url('http://placehold.it/500x150');
+	background-size: cover;
+	height: 200px;
+	padding: 0;
+	margin: 0;
+}
+
+#app-container {
+	width: 80%;
+}
+
+#view {
+	background-color: white;
+}
+
+#view .container {
+	width: 90%;
+}
+
+#employee-dashboard {
+	background-image: url("../images/portals.png");
+	object-fit: contain;
+}
+
+#manager-dashboard {
+	background-image: url("../images/portals.png");
+	object-fit: contain;
+}
+
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+  -webkit-appearance: none; 
+  margin: 0; 
+}

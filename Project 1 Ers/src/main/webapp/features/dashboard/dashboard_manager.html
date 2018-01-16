@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+
+<div class="jumbotron" id="manager-dashboard"></div>
+
+<div class="container">
+	<h1>
+		Hello, <span id="greetingUsername"></span>!
+	</h1>
+</div>
+
+<div class="row dashboard-card-container">
+	<div class="col-md-4 portfolio-item">
+		<div class="card h-100">
+			<div class="card-body text-center">
+				<h4 class="card-title">
+					<a class="manager-color" href="#"
+						onclick="loadEmployeesViewForManager();">View Employees</a>
+				</h4>
+				<p class="card-text">View all employees and their reimbursement
+					requests.</p>
+			</div>
+		</div>
+	</div>
+	<div class="col-md-4  portfolio-item">
+		<div class="card h-100 text-center">
+			<div class="card-body">
+				<h4 class="card-title">
+					<a class="manager-color" href="#"
+						onclick="loadReimbursementsViewForManager();">View
+						Reimbursement Requests</a>
+				</h4>
+				<p class="card-text">View all reimbursement requests submitted
+					by all employees. You can approve or deny any pending requests.</p>
+			</div>
+		</div>
+	</div>
+	<div class="col-md-4 portfolio-item">
+		<div class="card h-100 text-center">
+			<div class="card-body">
+				<h4 class="card-title">
+					<a class="manager-color" href="#" onclick="loadAccountView();">View
+						Account Details</a>
+				</h4>
+				<p class="card-text">View or update your account details</p>
+			</div>
+		</div>
+	</div>
+	<div class="divider"></div>
+	<div class="divider"></div>
+</div>

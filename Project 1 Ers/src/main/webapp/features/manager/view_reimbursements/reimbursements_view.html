@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+
+<div class="divider"></div>
+<div class="container" id="reimbursementDisplay">
+	<div class="form-group">
+		<select id="reimbursementStatusFilter"> <!--onchange="loadReimbursementsForManager();"--> 
+			<option>Pending</option>
+			<option>Resolved</option>
+			<option>Approved</option>
+			<option>Denied</option>
+		</select> 
+	</div>
+	<table class="table">
+		<thead>
+			<tr id="managerViewAllReimbursementsTableHeader">
+				<th scope="col">Amount</th>
+				<th scope="col">Type</th>
+				<th scope="col">Description</th>
+				<th scope="col">Date Submitted</th>
+				<th scope="col">Submitted By</th>
+			</tr>
+		</thead>
+		<tbody id="reimbursementTable">
+		
+		</tbody>
+	</table>
+	<div id="approveDenyButtons" class="form-group">
+		<button class="btn btn-default" id="mngrReimbursementViewApproveBtn" disabled="true">Approve</button>
+		<button class="btn btn-default" id="mngrReimbursementViewDenyBtn" disabled="true">Deny</button>
+	</div>
+	<div class="container text-center">
+		<h3>Receipt</h3>
+		<img src="" id="receiptImg"/>
+	</div>
+	<div class="divider">	</div>
+</div>

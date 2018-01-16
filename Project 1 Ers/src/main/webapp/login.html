@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+
+<link rel="stylesheet" type="text/css"
+	href="resources/css/login_style.css" />
+
+<script type="text/javascript"
+	src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+<link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+	integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+	crossorigin="anonymous">
+
+<!-- Optional theme -->
+<link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css"
+	integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp"
+	crossorigin="anonymous">
+
+<!-- Latest compiled and minified JavaScript -->
+<script
+	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
+	integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+	crossorigin="anonymous"></script>
+
+<title>Login</title>
+</head>
+
+<div class="container" id="login-div">
+	<div class="row">
+		<div class="Absolute-Center is-Responsive">
+			<div id="logo-container"></div>
+			<div class="col-sm-12 col-md-10 col-md-offset-1">
+				<h1 id="login-title" class="text-center text-login">Aperture Science ERS</h1>
+				<form method="POST" action="login" id="login-form">
+					<div class="form-group input-group">
+						<span class="input-group-addon"><i
+							class="glyphicon glyphicon-user"></i></span> <input class="form-control"
+							type="text" name='username' placeholder="Username" />
+					</div>
+					<div class="form-group input-group">
+						<span class="input-group-addon"><i
+							class="glyphicon glyphicon-lock"></i></span> <input class="form-control"
+							type="password" name='password' placeholder="Password" />
+					</div>
+					<div class="form-group">
+						<!-- <button type="button" name="submit" class="btn btn-def btn-block">Login</button> -->
+						<input type="submit" name="submit" value="Login"
+							class="btn btn-def btn-block" />
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+</div>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+
+<div class="divider"></div>
+<div class="container" id="reimbursementInput">
+	<div class="form-group">
+		<label for="reimbursementAmtInput">Amount</label> <input
+			class="form-control" type="number" id="reimbursementAmtInput"
+			placeholder="Amount" />
+	</div>
+	<div class="form-group">
+		<label for="reimbursementTypeInput">Type</label> <select
+			class="form-control" id="reimbursementTypeInput">
+			<option>Personal Injury</option>
+			<option>Science Accident</option>
+			<option>Psychological Damage</option>
+			<option>Travel</option>
+			<option>Other</option>
+		</select>
+	</div>
+	<div class="form-group">
+		<label for="reimbursementDescInput">Description</label>
+		<textarea rows="10" class="form-control" id="reimbursementDescInput"></textarea>
+	</div>
+	<div class="form-group">
+		<label for="reimbursementReceiptUpload">Upload image of
+			receipt</label> <input class="form-control" type="file"
+			id="reimbursementReceiptUpload"
+			accept="image/gif, image/jpeg, image/png" />
+		<!-- <output id="reimbursementReceiptImg"></output> -->
+		<img id="reimbursementReceiptImg" src="#" alt="receipt" />
+
+	</div>
+	<div class="form-group">
+		<button class="btn btn-default" value="Submit"
+			id="submitReimbursementBtn" onclick="submitReimbursement();">Submit
+			Request</button>
+	</div>
+
+</div>

@@ -1,0 +1,22 @@
+
+* {
+	font-type: sans-serif;
+}
+
+body {
+	background-image: url("../images/login_portal.jpg");
+	background-size: cover;
+}
+
+#login-div {
+	width: 30%;
+	margin-top: 10%;
+}
+
+#login-title {
+	font-family: "helvetica";
+}
+
+.text-login {
+	color: #F4F6F7;	
+}

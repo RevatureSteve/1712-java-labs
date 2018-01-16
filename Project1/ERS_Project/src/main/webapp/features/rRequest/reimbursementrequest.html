@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<div align = "left">
+	<form method="post"   class="form-group"  action="requestReimbursement">
+		Amount
+		<br/>
+		<input type="number"   class="form-control"  step="0.01" min=0 placeholder="enter amount" name="amount" id="amount" required />
+		<br/>
+		Justification
+		<br/>
+		<input type="text"   class="form-control" placeholder="enter justification" name="description" id="description" required />
+		<br/>
+		Type
+		<br/>
+		<select name="requestType"   class="form-control"  id="requestType">
+		</select>
+		<br/>
+		<!-- Receipt
+		<br/>
+		<input type="file" name = "receipt" size = "50"/>
+		<br/> -->
+		<br/>
+		<input id="submitButton" class = "btn btn-secondary" type="submit" value="Submit"/>
+	</form>
+</div>

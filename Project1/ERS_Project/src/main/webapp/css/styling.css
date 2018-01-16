@@ -1,0 +1,83 @@
+@charset "ISO-8859-1";
+
+body, html {
+	height: 100%;
+	width: 100%;
+	margin: 0;
+}
+
+
+body{
+	
+	background: url(../images/drawn-cave-dragon-4.jpg) center no-repeat;
+	 background-attachment: fixed;
+/*	background: #808080 center no-repeat;
+	background: -webkit-linear-gradient(#D3D3D3, #111111) center no-repeat;
+	background: 	-moz-linear-gradient(#D3D3D3, #111111) center no-repeat;
+	background:			linear-gradient(#D3D3D3, #111111) center no-repeat; */
+	
+	background-size: cover;
+	background-color: #444;
+	
+	/*text-shadow: 1px 1px 0px rgba(255,255,255,0.75); */
+}
+
+#divForm {
+	/*background: url(../images/stone.jpg); */
+	background: #222222;
+	width: 220px;
+/*	border-style: outset;
+	border-width: 5px; */
+	color: white;
+	padding: 25px;
+	margin: auto;
+	border-radius: 5px;
+	
+}
+
+.btn-secondary {
+	background-color: #010101;
+	color: white;
+}
+
+button{
+	background-color: #010101;
+	color: white;
+}
+
+button:hover {
+	color: #020202;
+}
+
+.table-bordered {
+	cellpadding: 10;
+	color: white;
+	background-color: #111111;
+}
+
+.list-group {
+	color: black;
+	background-color: #111111;
+}
+
+.list-item{
+	color: black;
+	background-color: #111111;
+}
+
+#userSpace{
+	
+	/*border-style: solid;
+	border-width: 2px;
+	border-color: white;
+	*/
+	border-radius: 5px;
+	font-family: Arial;
+	/* font-weight: bold; */
+	color: white;
+	padding: 25px;
+	margin: auto;
+	min-width: 100px;
+	display: inline-block;
+	background: #222222;
+}
